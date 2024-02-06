@@ -1,0 +1,252 @@
+.mt_3 {
+  margin: 8px 0px;
+}
+
+.col-12 {
+  img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.profile-card {
+  padding: 10px 20px;
+  height: auto;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border: none;
+
+  .item-label {
+    width: 100%;
+    text-align: left;
+  }
+
+  .item-data {
+    width: 100%;
+    text-align: left;
+  }
+
+  .col-12 {
+    .sellerProfile {
+      width: 170px;
+      height: 170px;
+      text-align: center;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      padding: 4px;
+      margin: 0% auto;
+      position: relative;
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+    }
+
+    p {
+      text-align: center;
+      margin: 0px;
+      margin-top: 12px;
+    }
+  }
+
+  .col-12 {
+    position: relative;
+
+    .profileName {
+      line-height: 30px;
+      font-size: 30px;
+      font-weight: 550;
+      text-align: center;
+    }
+
+    .profileDescription {
+      margin: 20px 0px;
+      text-align: center;
+    }
+
+    .profileDateCreated {
+      height: 10%;
+      width: 100%;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}
+
+.row {
+  .col-12 {
+    .item-card {
+      width: 80%;
+      position: relative;
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+      height: auto;
+
+      .product-image {
+        display: block;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: -20px 30px 50px #9999994d;
+        }
+      }
+
+      .content {
+        .product-name {
+          text-transform: capitalize;
+          font-size: 20px;
+          font-weight: 900;
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin: 0px;
+        }
+
+        .product-price {
+          text-align: center;
+          color: #0fc263;
+          font-size: 16px;
+          font-weight: 900;
+          padding-bottom: 10px;
+          margin: 0px;
+        }
+
+        .product-qoh {
+          text-align: left;
+          text-align: center;
+          color: #999999;
+          font-size: 16px;
+          font-weight: 900;
+          margin: 0px;
+          padding-bottom: 10px;
+        }
+
+        button {
+          padding: 13px 30px 14px;
+          font-size: 16px;
+          background-color: #0fc263;
+          color: #fff;
+          border: none;
+          text-transform: uppercase;
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+          font-weight: 900;
+          width: 100%;
+          display: block;
+          outline: none;
+        }
+      }
+
+      .product-seller,
+      .product-harvestdate {
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+        color: #999999;
+        font-weight: 900;
+        padding-bottom: 15px;
+      }
+
+      .addToCart {
+        padding: 13px 30px 14px;
+        font-size: 16px;
+        background-color: #0fc263;
+        color: #fff;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        font-weight: 900;
+        width: 100%;
+        display: block;
+        outline: none;
+      }
+
+      .addToCart:hover {
+        background-color: rgba(0, 191, 99, 0.6);
+      }
+
+      .hover-icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .item-card {
+    width: 100% !important;
+  }
+
+  .item-label {
+    font-size: 12px;
+  }
+
+  .item-data {
+    font-size: 12px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mt_3 {
+    margin: 0px;
+  }
+
+  .profileName {
+    font-size: 28px !important;
+    font-weight: 600;
+    line-height: 25px !important;
+  }
+
+  .profileDescription {
+    font-size: 16px;
+  }
+
+  .profileDateCreated {
+    font-size: 14px;
+  }
+
+
+  .upload-profile-photo {
+    font-size: 10px;
+    padding: 2px !important;
+  }
+
+  .item-label {
+    font-size: 8px;
+  }
+
+  .item-data {
+    font-size: 8px;
+    padding: 0px;
+  }
+}

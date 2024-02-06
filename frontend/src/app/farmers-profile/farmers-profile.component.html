@@ -1,0 +1,130 @@
+<!-- <mat-card align="center" style="padding: 0">
+    <mat-card-content class="main-container">
+
+        <div class="banner-container">
+            <img class="banner-image" src="../../../assets/profile-banner.png">
+        </div>
+
+        <div class="img-container">
+            <img class="profile-image" *ngIf="profileImageLoaded"
+                [src]="imageSrc || '../../assets/default-avatar.png'" />
+            <img class="profile-image-loading" *ngIf="!profileImageLoaded"
+                src='../../../assets/profile-image-loading.gif' alt="Loading Image..." />
+        </div>
+
+        <div *ngIf="profile" class="account-details-container">
+            <span class="display-name-input">
+                {{ profile.displayName }}
+            </span>
+            <p style="font-size: small">
+                Member since: {{ dateCreatedFormatted }}
+            </p>
+
+            <div class="account-description-container">
+                <span>
+                    <p>{{ profile.description != '' ? profile.description : 'This user has not set up a profile description' }}</p>
+                </span>
+            </div>
+
+            <div class="nothing-for-sale-container" *ngIf="userStand.produceList.length == 0">
+                <p class="nothing-for-sale">This user currently has nothing for sale</p>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="userStandDataExists">
+        <div class="produce-container" id="produceSection">
+            <p><b>Buying from other profiles is currently in development!</b></p>
+            <div class="grid-container">
+                <ng-container *ngFor="let produce of userStand.produceList; let i = index">
+                    <div class="grid-item" (mouseenter)="onHover(produce)" (mouseleave)="onLeave()"
+                        [ngStyle]="{ cursor: getCursor() }">
+
+                        <div class="item-data">
+                            <img class="product-image" [src]="rawProduceImg[i]" />
+                            <p class="product-name">{{ produce.foodName }}</p>
+                            <p class="product-price">${{ produce.price }}</p>
+                            <p class="product-qoh">{{ produce.qoh == 0 ? 'Out of stock!' : produce.qoh + 'x' }}</p>
+                            <div class="product-seller-container">
+                                <p class="product-seller">
+                                    Seller: {{ profile!.displayName }}
+                                </p>
+                                <p class="product-harvestdate">
+                                    Harvested: {{ produce.harvestDate }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card> -->
+
+<div class="px-4">
+    <div class="row py-4">
+        <div class="col-12 col-lg-4 pb-4">
+            <div class="profile-card">
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <div class="sellerProfile shadow">
+                            <img class="profile-image" *ngIf="!profileImageLoaded"
+                                src="../../../assets/profile-image-loading.gif" alt="Loading Image..." />
+                            <img class=" profile-image" *ngIf="profileImageLoaded"
+                                [src]="imageSrc || '../../../assets/default-avatar.png'" alt="User's Profile Pic" />
+                        </div>
+                    </div>
+
+                    <div *ngIf="profile" class="col-12 py-3 pb-0">
+                        <div class="row">
+                            <div class="col-12 mt_3">
+                                <div class="row">
+                                    <div *ngIf="profile" class="profileName">
+                                        {{ profile.displayName }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="profileDescription">
+                                    <p>{{ profile.description != '' ? profile.description : 'This user has not set up a profile description' }}</p>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-8">
+            <div class="row">
+                <h2>*Buying from user profiles is currently in progress*</h2>
+                <div *ngIf="userStand.produceList.length == 0">
+                    <p style="color: rgb(173, 18, 18); font-size: 18px;">This user currently has nothing for sale</p>
+                </div>
+
+                <div *ngFor="let produce of userStand.produceList; let i = index" class="col-lg-4 col-md-6 col-12 py-4">
+                    <div class="item-card">
+                        <div class="grid-item" (mouseenter)="onHover(produce)" (mouseleave)="onLeave()"
+                            [ngStyle]="{ cursor: getCursor() }">
+                            <div class="item-data">
+                                <img class="product-image" [src]="rawProduceImg[i] || '../../../assets/profile-image-loading.gif'" />
+                                <div class="content">
+                                    <p class="product-name">{{ produce.foodName }}</p>
+                                    <p class="product-price">${{ produce.price }}</p>
+                                    <p class="product-qoh">
+                                        {{ produce.qoh == 0 ? "Out of stock!" : produce.qoh + "x" }}
+                                    </p>
+                                    <p class="product-harvestdate">
+                                        Harvested: {{ produce.harvestDate }}
+                                    </p>
+                                    <!-- <button class="addToCart">Add to cart</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
